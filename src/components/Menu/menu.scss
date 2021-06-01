@@ -1,0 +1,114 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.menu{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: vars.$menuWidthMedium;
+  padding: (vars.$gutter / 2) 0;
+  background-color: (rgba(220,166,74, 0.6));
+  height: 100%;
+  font-family: 'Zen Dots', cursive, sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
+
+    &__pseudo {
+      padding-top: 1rem;
+      font-size: 1.5rem;
+      color: vars.$dark;
+    }
+
+    &i{
+      font-size: 3rem;
+    }
+
+    
+
+// condition pour un écran supérieur ou égal à 1600px
+    @media (min-width: vars.$big) {
+      font-size: 1rem;
+      i{
+        font-size: 2rem;
+      }
+    }
+// condition pour un écran inférieur à 1600px
+    @media (max-width: vars.$big) {
+      font-size: 1rem;
+      i{
+        font-size: 2rem;
+      }
+    }
+// condition pour un écran inférieur à 1200px
+    @media (max-width: vars.$medium-light) {
+      font-size: 0.8rem;
+      i{
+        font-size: 1rem;
+      }
+    }
+// condition pour un écran inférieur à 1000px
+    @media (max-width: vars.$small) {
+      font-size: 0.8rem;
+      width: vars.$menuWidthSmall;
+      i{
+        font-size: 0.8rem;
+
+      }
+    }
+// condition pour un écran type tablette inférieur à 768px
+    @media (max-width: vars.$tablet) {
+
+        display: none;
+    }
+
+    // condition pour un écran type tablette inférieur à 768px
+    @media (max-width: vars.$tablet) {
+
+      &--open{
+      display:flex;
+    } 
+
+    // condition pour un écran inférieur à 500px
+    @media (max-width: 500px) {
+      font-size: 0.7rem;
+      width: 22%;
+      background-color: (rgba(220,166,74, 0.8));
+      i{
+        font-size: 0.8rem;
+
+      }
+    }
+  }
+
+
+
+
+    &__link {
+      display: block;
+      padding: (vars.$gutter / 1) vars.$gutter;
+      transition: color .2s, box-shadow .4s;
+      color:vars.$white;
+
+      &:hover:not(&--active) {
+        color: vars.$gold;
+      }
+
+      &--active {
+        color: vars.$gold;
+        box-shadow: inset -3px 0 0 vars.$gold;
+      }
+  }
+}
+
+// Pour enlever le hover bleu par défaut de la balise <a>
+a{
+  color: white;
+  &:hover{
+    color: white;
+
+  }
+}

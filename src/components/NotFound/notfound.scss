@@ -1,0 +1,26 @@
+@use 'src/styles/vars';
+
+.notfound {
+
+  position: relative;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  
+}
+
+#button {
+  margin: auto;
+  justify-content:center;
+  position:absolute;
+  left: 46%;
+  bottom: 60%;
+  background-color: vars.$dark;
+  color: vars.$white;
+  font-family: 'Parisienne', cursive;
+  padding: 0.5rem 0.8rem;
+}
+
+#button:hover {
+  background-color: vars.$gold;
+}

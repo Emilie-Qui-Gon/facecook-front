@@ -1,0 +1,101 @@
+
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.profil {
+  margin: auto;
+  animation: fadein 3s;
+
+  &__menu {
+  
+      color: vars.$gold;
+      text-shadow: 2px 2px 2px vars.$dark;
+      margin-bottom: 8%;
+      text-align: right;
+      width: 100%;
+      align-self: flex-start;
+      text-align: center;
+      font-size: 5rem;
+      font-family: 'Parisienne', cursive;
+      font-weight: bold;
+    
+
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__menu {
+        font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &__menu {
+        font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__menu {
+        font-size: 2.5rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 40vh;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    text-align: center;
+  }
+
+  &__title {
+    padding-top: 1.5rem;
+  }
+
+  &__button {
+    margin: 0;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+  }
+
+  &__button-primary {
+    background-color: vars.$gold;
+    color: vars.$white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    margin-right: .2rem;
+  }
+
+  &__button-primary:hover {
+    background-color: vars.$dark;
+    color: vars.$gold;
+  }
+
+}
+
+#modif-card{
+  margin: 0;
+  padding: 2%;
+}
+
+.profil-box{
+  color: vars.$white;
+  display: flex;
+  width: 87.8%;
+  height: 85%;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0%;
+}

@@ -1,0 +1,23 @@
+@use 'src/styles/vars';
+
+body {
+  background: vars.$brown;
+}
+
+.app {
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ),url('../../assets/image-fonds.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

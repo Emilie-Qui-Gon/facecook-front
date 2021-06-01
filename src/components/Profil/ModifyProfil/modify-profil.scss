@@ -1,0 +1,86 @@
+@use 'src/styles/vars';
+
+.registration {
+  height: 40vh;
+
+  &__title {
+    color: vars.$white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 2%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__title {
+        font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &__title {
+        font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__title {
+        font-size: 2.5rem;
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__file {
+    width: 230px;
+  }
+
+  &__select {
+    width: 190px;
+  }
+
+  &__avatar {
+    color: vars.$white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__picture {
+    padding-left: 2rem;
+  }
+
+  &__message {
+    margin: .3em 1em;
+  }
+
+  &__logged {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  // &__button {
+  //   margin-top: 1rem;
+  //   font-size: 1em;
+  //   color: #fff;
+  //   background-color: vars.$gold;
+  //   border-radius: .3em;
+  //   border: 0;
+  //   padding: .7em;
+  //   height: 2.5em;
+  //   width: 6rem;
+  // }
+
+  &__button:hover {
+    background-color: vars.$dark;
+    color: vars.$gold;
+  }
+}
+
+
+#registration-button-id{
+  margin-bottom: 2%;
+}

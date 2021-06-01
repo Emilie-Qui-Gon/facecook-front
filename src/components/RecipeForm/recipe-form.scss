@@ -1,0 +1,269 @@
+
+@use 'src/styles/vars';
+
+
+.description{
+  color: vars.$white;
+  display: flex;
+  width: 87.8%;
+  height: 90%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0%;
+
+   // condition pour un écran inférieur ou égal à 1000px
+   @media (max-width: 1000px) {
+    width: 84%;
+    }
+
+     // condition pour un écran inférieur ou égal à 900px
+     @media (max-width: 900px) {
+      height: 98%;
+      }
+
+      // condition pour un écran inférieur ou égal à 768px
+     @media (max-width: 768px) {
+      width: 100%;
+      }
+
+  &__box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 95%;
+    background-color: (rgba(255, 255, 255, 0.6));
+    border: 4mm ridge (rgba(220,166,74, 0.6));
+
+     // condition pour un écran inférieur ou égal à 1100px
+     @media (max-width: 1100px) {
+      width: 98%;
+      }
+
+      // condition pour un écran inférieur ou égal à 900px
+      @media (max-width: 900px) {
+        height: 100%;
+        }
+   
+     &__title{
+       padding-top: 2.5%;
+       font-family: 'Parisienne', cursive;
+       font-size: 4rem;
+       font-weight: bold;
+       color: vars.$white;
+       margin-bottom: 1%;
+     
+       // condition pour un écran inférieur ou égal à 1100px
+       @media (max-width: 1100px) {
+       font-size: 3rem;
+       }
+     
+       // condition pour un écran inférieur ou égal à 870px
+       @media (max-width: 870px) {
+       font-size: 2rem;
+       }
+     
+       // condition pour un écran inférieur ou égal à 530px
+       @media (max-width: 530px) {
+       font-size: 1.8rem;
+       }
+     }
+
+     &__details{
+      display: flex;
+      height: 40%;
+      width: 95%;
+
+       // condition pour un écran inférieur ou égal à 900px
+       @media (max-width: 900px) {
+        flex-direction: column;
+        height: 45%;
+        align-items: center;
+        }
+
+      &__infos{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+
+         // condition pour un écran inférieur ou égal à 900px
+        @media (max-width: 900px) {
+        width: 95%;
+        }
+        
+        &__input-titre{
+          border: none;
+          border-bottom: 4px solid vars.$gold;
+          background-color: white;
+          text-align: center;
+          font-style: italic;
+          border-radius: 2rem;
+          font-size: 2rem;
+          font-family: 'Parisienne', cursive;
+          font-weight: bold;
+          width: 90%;
+          height: 30%;
+          color: vars.$gold;
+          
+          
+           &::placeholder{
+             color: vars.$gold;
+            }
+
+             // condition pour un écran inférieur ou égal à 900px
+             @media (max-width: 900px) {
+              width: 90%;
+            }
+          }
+
+        &__input-description{
+          width: 70%;
+          margin:3% 3%;
+          border: 0px;
+          border-radius: 0.2rem;
+          text-align: center;
+          border-bottom: 4px solid vars.$gold;
+          font-family: monospace, sans-serif;
+          background-color: rgb(255, 255, 255);
+          height: 30%;
+          margin-bottom: 1.2rem;
+          color: vars.$gold;
+            &::placeholder{
+              color: vars.$gold;
+              font-family: monospace, sans-serif;
+              font-size: 1rem;
+            }
+
+             // condition pour un écran inférieur ou égal à 900px
+              @media (max-width: 900px) {
+                padding: 1%;
+                width: 70%;
+              }
+          }
+
+        &__select{
+  
+          margin-bottom: 1em;
+          padding: .25em;
+          border: 0;
+          border-bottom: 2px solid vars.$white; 
+          letter-spacing: .10em;
+          border-radius: 0.5rem;
+          background-color: (rgba(220,166,74, 0.6));
+          color:white;
+          font-weight: bold;
+          font-family: monospace, sans-serif;
+          width: 70%;
+          height: 25%;
+
+            &:focus, &:active {
+              outline: 0;
+              border-bottom-color: rgb(255, 174, 0);
+              width: 80%;        
+              }
+
+              &:hover{
+                background-color: vars.$dark;
+                color: vars.$gold; 
+              }
+
+                 // condition pour un écran inférieur ou égal à 900px
+               @media (max-width: 900px) {
+               width: 50%;
+               }
+          }
+        } 
+
+      &__ingredients{
+         width: 50%;
+
+          // condition pour un écran inférieur ou égal à 900px
+        @media (max-width: 900px) {
+        width: 70%;
+        height: 45%;
+        margin-top: 1%;
+        }
+
+         &__detail{
+          width: 95%;
+          height: 100%;
+          overflow:auto;
+          background-color:#FFF;
+          color:rgb(8, 156, 255);
+          font-family: 'Parisienne', cursive;
+          font-weight:normal;
+          font-size:1.5rem;
+          resize:none;
+          line-height:40px;
+          padding-left:100px;
+          padding-right:100px;
+          padding-top:45px;
+          padding-bottom:34px;
+          background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+          background-repeat:repeat-y, repeat;
+          -webkit-border-radius:12px;
+          border-radius:12px;
+          -webkit-box-shadow: 0px 2px 14px #FFF;
+          box-shadow: 0px 2px 14px rgb(48, 27, 0);
+          border-top:1px solid #FFF;
+          border-bottom:1px solid #FFF;
+         }
+        } 
+        
+      &__instructions{
+        width: 95%;
+        height: 30%;
+        overflow:auto;
+        background-color:#FFF;
+        color:rgb(8, 156, 255);
+        font-family: 'Parisienne', cursive;
+        font-weight:normal;
+        font-size:1.5rem;
+        resize:none;
+        line-height:40px;
+        padding-left:100px;
+        padding-right:100px;
+        padding-top:45px;
+        padding-bottom:34px;
+        background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+        background-repeat:repeat-y, repeat;
+        -webkit-border-radius:12px;
+        border-radius:12px;
+        -webkit-box-shadow: 0px 2px 14px #FFF;
+        box-shadow: 0px 2px 14px rgb(48, 27, 0);
+        border-top:1px solid #FFF;
+        border-bottom:1px solid #FFF;
+        }
+
+
+      &__button-form{
+ 
+        text-align: center;
+        color: #fff;
+        background-color: vars.$gold;
+        font-family: 'Parisienne', cursive;
+        font-weight: 700;
+        font-size: 1.5rem; 
+        padding: 0.2% 0.8% 0 0.4%;
+        border: none;
+        border-radius: 2rem;
+        font-style: italic;
+        margin: 1% 0;
+      
+
+        &:hover {
+          background-color: vars.$dark;
+          color: vars.$gold;
+          }
+        } 
+    }   
+  }
+}
+
+
+
+

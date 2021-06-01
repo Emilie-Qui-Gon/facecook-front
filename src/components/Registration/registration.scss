@@ -1,0 +1,120 @@
+@use 'src/styles/vars';
+
+.registration {
+  width: 88%;
+  height: 50%;
+  background-color: (rgba(220,166,74, 0.6));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @media screen and (max-width: 1000px) {
+     
+    width: 84%;
+  }
+
+  @media screen and (max-width: 768px) {
+ 
+   width: 100%;
+  }
+
+  &__titles {
+    color: vars.$gold;
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px vars.$white;
+    font-family: 'Zen Dots', cursive, sans-serif;
+  }
+
+  &__label{
+    color: rgb(226, 225, 225);
+    font-size: 1.18rem;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  &__input-parcourir{
+    color: rgb(197, 197, 197);
+    font-size: 0.95rem;
+    margin-bottom: 5%;
+    font-style: italic;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    &__titles {
+        font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &__titles {
+        font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__titles {
+        font-size: 2.5rem;
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__file {
+    width: 230px;
+  }
+
+  &__picture {
+    padding-left: 2rem;
+  }
+
+  &__input {
+    color: vars.$white;
+  }
+
+  &__message {
+    margin: .3em 1em;
+  }
+
+  &__logged {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    text-align: center;
+    color: #fff;
+    background-color: vars.$gold;
+    font-family: 'Parisienne', cursive;
+    font-weight: 700;
+    font-size: 1.5rem; 
+    margin-top: 6%;
+    padding: 4% 7% 2% 4%;
+    border: none;
+    border-radius: 3rem;
+    font-style: italic;
+    
+    
+  }
+  &__button:hover {
+    background-color: vars.$dark;
+    color: vars.$gold;
+  }
+}
+
+
+#visibility-select{
+  width: 240px;
+  font-style: italic;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+#registration-id{
+  height: 52%;
+}

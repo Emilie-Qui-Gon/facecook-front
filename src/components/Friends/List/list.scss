@@ -1,0 +1,98 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.friends{
+  width: 100%;
+  height: 100%;
+
+  // condition pour un écran inférieur ou égal à 768px
+  @media (max-width: 768px) {
+  width: 100%;
+  }
+
+}
+
+.list-title{
+
+    padding-top: 2.5%;
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+    color: vars.$white;
+    display: flex;
+    justify-content: center;
+    
+    
+
+    // condition pour un écran inférieur ou égal à 1100px
+    @media (max-width: 1100px) {
+    font-size: 3rem;
+    }
+
+    // condition pour un écran inférieur ou égal à 870px
+    @media (max-width: 870px) {
+    font-size: 2rem;
+    }
+
+    // condition pour un écran inférieur ou égal à 530px
+    @media (max-width: 530px) {
+    font-size: 1.8rem;
+    }
+}
+
+.list-cards{
+   
+    display: flex;
+    justify-content: center;
+    height: 70%;  
+    
+    &__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.card-pseudo{
+    font-size: 1.6rem;
+    color: vars.$dark;
+    font-weight: bold;
+    text-align: right;
+    font-family: 'Parisienne', cursive;
+    padding-top: 3% 2% 0 35%;
+    margin-right: 4%;
+    margin-top: 1.5%;
+    width: 80%;
+
+}
+
+#card-button{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 3%;
+    border-radius: 10rem;
+}
+
+.add--link{
+        text-align: center;
+        color: #fff;
+        background-color: vars.$gold;
+        font-family: 'Parisienne', cursive;
+        font-weight: 700;
+        font-size: 1.5rem; 
+        padding: 0.2% 0.8% 0 0.4%;
+        border: none;
+        border-radius: 2rem;
+        font-style: italic;
+        margin-top: 1%;
+        padding: 1%;
+        margin-bottom: 2%;
+        margin-left: 10%;
+
+        &:hover {
+          background-color: vars.$dark;
+          color: vars.$gold;
+          }
+}
+

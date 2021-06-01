@@ -1,0 +1,73 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.recipes{
+    width: 87.8%;
+    height: 85%;
+
+// condition pour un écran inférieur ou égal à 768px
+@media (max-width: 768px) {
+width: 100%;
+}
+
+      &__title{
+        padding-top: 2.5%;
+        font-family: 'Parisienne', cursive;
+        font-size: 4rem;
+        font-weight: bold;
+        color: vars.$white;
+      
+        // condition pour un écran inférieur ou égal à 1100px
+        @media (max-width: 1100px) {
+          font-size: 3rem;
+        }
+
+        // condition pour un écran inférieur ou égal à 870px
+        @media (max-width: 870px) {
+          font-size: 2rem;
+        }
+
+        // condition pour un écran inférieur ou égal à 530px
+        @media (max-width: 530px) {
+          font-size: 1.8rem;
+        }
+
+      }
+          
+      &__div{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+          &__form{
+            width: 100%;
+          }
+      }
+
+      &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        // height: 100%;
+      }         
+}
+
+
+
+#recipes-repo__radio1,
+#recipes-repo__radio2,
+#recipes-repo__radio3{
+        margin-top: 0;
+        color: vars.$gold;
+        font-size: 1.2rem;
+        font-family: 'Chewy', cursive;
+        margin-left: 0%;
+        margin-right: 0%;
+}
+
+.recipes-repo__input{
+  margin: 1%;
+}

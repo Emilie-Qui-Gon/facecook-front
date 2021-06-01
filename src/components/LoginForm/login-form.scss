@@ -1,0 +1,112 @@
+@use 'src/styles/vars';
+
+.login {
+
+  width: 88%;
+  height: 35%;
+  background-color: (rgba(220,166,74, 0.6));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+
+  @media screen and (max-width: 1000px) {
+     
+        width: 84%;
+    }
+
+  @media screen and (max-width: 768px) {
+     
+       width: 100%;
+   }
+ 
+
+
+  &__title {
+    color: vars.$gold;
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px vars.$white;
+    font-family: 'Zen Dots', cursive, sans-serif;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__title {
+        font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    &__title {
+        font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__title {
+        font-size: 2.5rem;
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
+
+  &__message {
+    margin: .3em 1em;
+  }
+
+  &__logged {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    text-align: center;
+    color: #fff;
+    background-color: vars.$gold;
+    font-family: 'Parisienne', cursive;
+    font-weight: 700;
+    font-size: 1.5rem; 
+    margin-top: 1%;
+    padding: 0.5% 0.9% 0.3% 0.6%;
+    border: none;
+    border-radius: 3rem;
+    font-style: italic;
+  }
+
+  &__button:hover {
+    background-color: vars.$dark;
+    color: vars.$gold;
+  }
+
+  &__titles {
+    color: vars.$gold;
+    font-size: 5rem;
+    text-shadow: 2px 2px 2px vars.$white;
+    animation: fadein 3s;
+  }
+  
+  &__subtitle{
+    color: vars.$gold;
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px vars.$white;
+    font-family: 'sans-serif'; 
+    margin: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+.field{
+  width: 240px;
+}

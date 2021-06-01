@@ -1,0 +1,35 @@
+@use 'reset';
+@use 'vars';
+
+html{
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+  ),url('../assets/image-fonds.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+}
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+
+}
+
+
+/* 
+  // or you can import your own font
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+*/
+ 

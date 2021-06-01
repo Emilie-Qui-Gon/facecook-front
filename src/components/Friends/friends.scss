@@ -1,0 +1,14 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+
+.friends{
+  width: 87.8%;
+  height: 85%;
+
+  // condition pour un écran inférieur ou égal à 768px
+  @media (max-width: 768px) {
+  width: 100%;
+  }
+
+}
